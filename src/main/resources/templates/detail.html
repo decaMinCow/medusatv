@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<html class="no-js" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>Medusatv</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="直播聚合平台" />
+<meta name="keywords" content="斗鱼 熊猫 虎牙 战旗 火猫 龙珠 全民 映客 花椒" />
+
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel='stylesheet' href='css/font.css' />
+<link rel="stylesheet" href="css/animate.css" />
+<link rel="stylesheet" href="css/icomoon.css" />
+<link rel="stylesheet" href="css/bootstrap.css" />
+<link rel="stylesheet" href="css/style.css" />
+
+<script src="js/modernizr-2.6.2.min.js"></script>
+
+</head>
+<body style="background:#FFFACD">
+	<input type="hidden" value="0" placeholder="Key" name="pageIndex"
+		id="pageIndex" />
+	<div id="fh5co-offcanvas">
+		<a href="#" class="fh5co-close-offcanvas js-fh5co-close-offcanvas"><span><i
+				class="icon-cross3"></i> <span>Close</span></span></a>
+		<div class="fh5co-bio">
+			<figure>
+				<img src="images/person1.jpg" alt="Free HTML5 Bootstrap Template"
+					class="img-responsive" />
+			</figure>
+			<h3 class="heading">关于网站</h3>
+			<h2>MedusaTV</h2>
+			<br />
+			<p>
+				免费帮大家汇集各平台在线主播<br /> <br />Emai:decamincow#gmail.com
+			</p>
+			<!-- <ul class="fh5co-social">
+				<li><a href="#"><i class="icon-twitter"></i></a></li>
+				<li><a href="#"><i class="icon-facebook"></i></a></li>
+				<li><a href="#"><i class="icon-instagram"></i></a></li>
+			</ul> -->
+		</div>
+
+		<div class="fh5co-menu">
+			<!-- <div class="fh5co-box">
+				<h3 class="heading">类别</h3>
+				<ul>
+					<li><a href="#">Travel</a></li>
+					<li><a href="#">Style</a></li>
+					<li><a href="#">Photography</a></li>
+					<li><a href="#">Food &amp; Drinks</a></li>
+					<li><a href="#">Culture</a></li>
+				</ul>
+			</div> -->
+			<div class="fh5co-box">
+				<h3 class="heading">搜索</h3>
+				<form action="#" th:action="@{/search}">
+					<div class="form-group">
+						<input type="text" name="keyWord" class="form-control"
+							placeholder="主播ID / 房间号|名|类"
+							onkeydown="if(event.keyCode==13){this.form.submit();}" /> <input
+							style="display: none" />
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<header id="fh5co-header">
+
+		<div class="container-fluid">
+
+			<div class="row">
+				<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+				<!-- 	<ul class="fh5co-social">
+					<li><a href="#"><i class="icon-twitter"></i></a></li>
+					<li><a href="#"><i class="icon-facebook"></i></a></li>
+					<li><a href="#"><i class="icon-instagram"></i></a></li>
+				</ul> -->
+				<div class="col-lg-12 col-md-12 text-center">
+					<h1 id="fh5co-logo">
+						<a href="index.html">MedusaTV</a>
+					</h1>
+				</div>
+
+			</div>
+
+		</div>
+
+	</header>
+	<a th:href="@{/index}" class="fh5co-post-prev"><span><i
+			class="icon-chevron-left"></i> 返回</span></a>
+	<div class="container-fluid">
+		<div class="row fh5co-post-entry single-entry">
+			<article
+				class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-12 col-xs-offset-0">
+				<figure class="animate-box">
+					<div class="details-txt">
+						<div class="det-img">
+							<div class="videl-list" style="height: 625px;">
+								<iframe scrolling="no" style="background: #000000;"
+									frameborder="no" border="0" th:src="${link}" width="100%"
+									height="100%"></iframe>
+							</div>
+						</div>
+					</div>
+				</figure>
+				<span class="fh5co-meta"><a href="#"
+					th:text="${anchorname}">主播</a></span>
+				<h2 class="fh5co-article-title">
+					<a href="#" th:text="${roomname}">标题</a>
+				</h2>
+				<span class="fh5co-meta fh5co-date"><span th:text="${category}">类型</span>
+					| <span th:text="|${watcher}人气|">人数</span></span>
+			</article>
+		</div>
+	</div>
+
+	<footer id="fh5co-footer">
+		<p>
+			<small>&copy;medusatv.com 2016 © All Rights Reserved.<br />鲁ICP备16010485号
+			</small>
+		</p>
+	</footer>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

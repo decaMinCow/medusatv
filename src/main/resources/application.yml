@@ -1,0 +1,26 @@
+server:
+  port : 9090 # 服务端口
+  error.path : /error # 错误页，指定发生错误时，跳转的URL。请查看BasicErrorController源码便知
+  address: 127.0.0.1 # 只能80端口访问
+spring.data:
+  elasticsearch : 
+    cluster-nodes : localhost:9300
+    repositories.enabled : true
+    cluster-name : elasticsearch
+    
+#logging:
+#  config: classpath:logback.xml
+#  path: /home/work/medusatv/log
+#  path: /Users/decamincow/Downloads/log
+  
+#thymeleaf
+spring:
+  thymeleaf:
+    #cache 调试页面无缓存，可刷新
+    cache: false
+    mode: HTML5
+    encoding: UTF-8
+    content-type: text/html; charset=utf-8
+    #default 前后缀为默认值可以不填
+#    prefix: classpath:/templates/
+#    suffix: .html

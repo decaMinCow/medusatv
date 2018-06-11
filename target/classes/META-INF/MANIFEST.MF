@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: spring-boot-medusatv
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: decamincow
+Implementation-Vendor-Id: com.medusatv
+Build-Jdk: 1.8.0_74
+Implementation-URL: http://projects.spring.io/spring-boot/medusatv/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
